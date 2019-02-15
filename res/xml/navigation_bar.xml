@@ -23,6 +23,7 @@
         android:key="navbar_inverse"
         android:title="@string/nav_bar_layout_inverse_title"
         android:summary="@string/nav_bar_layout_inverse_summary"
+        android:dependency="navbar_visibility"
         android:defaultValue="false" />
 
     <com.lotus.settings.preferences.SystemSettingSwitchPreference
@@ -36,6 +37,7 @@
         android:key="one_hand_mode_enabled"
         android:title="@string/one_hand_mode_title"
         android:summary="@string/one_hand_mode_summary"
+        android:dependency="navbar_visibility"
         android:defaultValue="false" />
 
     <PreferenceCategory
@@ -48,7 +50,7 @@
             android:summary="@string/use_bottom_gesture_summary"
             android:defaultValue="false" />
 
-       <com.lotus.settings.preferences.CustomSeekBarPreference
+        <com.lotus.settings.preferences.CustomSeekBarPreference
             android:key="gesture_swipe_length"
             android:title="@string/gesture_swipe_length_title"
             android:summary="@string/gesture_swipe_length_summary"
@@ -56,7 +58,7 @@
             settings:units="px"
             android:dependency="use_bottom_gesture_navigation" />
 
-       <com.lotus.settings.preferences.CustomSeekBarPreference
+        <com.lotus.settings.preferences.CustomSeekBarPreference
             android:key="gesture_swipe_timeout"
             android:title="@string/gesture_action_timeout_title"
             android:summary="@string/gesture_action_timeout_summary"
@@ -65,6 +67,16 @@
             android:persistent="false"
             settings:units="ms"
             android:dependency="use_bottom_gesture_navigation" />
+
+        <com.lotus.settings.preferences.SystemSettingListPreference
+            android:key="bottom_gesture_navigation_feedback_duration"
+            android:entries="@array/bottom_gestures_feedback_time_labels"
+            android:entryValues="@array/bottom_gestures_feedback_time"
+            android:title="@string/bottom_gestures_feedback_duration_title"
+            android:summary="%s"
+            android:defaultValue="50"
+            android:dependency="use_bottom_gesture_navigation" />
+
     </PreferenceCategory>
 
     <PreferenceCategory
