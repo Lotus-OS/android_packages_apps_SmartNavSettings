@@ -56,7 +56,7 @@ import com.android.internal.utils.Config.ButtonConfig;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
-import com.aosip.support.preference.CustomSeekBarPreference;
+import com.lotus.settings.preferences.CustomSeekBarPreference;
 
 public class SmartbarSettings extends SettingsPreferenceFragment implements
         OnPreferenceChangeListener {
@@ -215,7 +215,7 @@ public class SmartbarSettings extends SettingsPreferenceFragment implements
             case DIALOG_RESET_CONFIRM:
             case DIALOG_RESTORE_PROFILE:
             case DIALOG_SAVE_PROFILE:
-                return MetricsProto.MetricsEvent.OWLSNEST;
+                return MetricsProto.MetricsEvent.LOTUS_SETTINGS;
             default:
                 return 0;
         }
@@ -447,6 +447,6 @@ public class SmartbarSettings extends SettingsPreferenceFragment implements
 
     @Override
     public int getMetricsCategory() {
-        return MetricsProto.MetricsEvent.OWLSNEST;
+        return MetricsProto.MetricsEvent.LOTUS_SETTINGS;
     }
 }

@@ -35,8 +35,8 @@ import android.util.DisplayMetrics;
 import android.util.TypedValue;
 
 import com.android.settings.SettingsPreferenceFragment;
-import com.aosip.support.preference.CustomSeekBarPreference;
-import com.aosip.support.preference.SystemSettingSwitchPreference;
+import com.lotus.settings.preferences.CustomSeekBarPreference;
+import com.lotus.settings.preferences.SystemSettingSwitchPreference;
 import com.android.internal.logging.nano.MetricsProto;
 import com.android.internal.utils.ActionConstants;
 import com.android.internal.utils.Config;
@@ -249,6 +249,6 @@ public class NavigationBarSettings extends SettingsPreferenceFragment implements
 
     @Override
     public int getMetricsCategory() {
-        return MetricsProto.MetricsEvent.OWLSNEST;
+        return MetricsProto.MetricsEvent.LOTUS_SETTINGS;
     }
 }

@@ -40,8 +40,8 @@ import android.view.MenuInflater;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.aosip.support.colorpicker.ColorPickerPreference;
-import com.aosip.support.preference.CustomSeekBarPreference;
+import net.margaritov.preference.colorpicker.ColorPickerPreference;
+import com.lotus.settings.preferences.CustomSeekBarPreference;
 
 public class PulseSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
@@ -401,6 +401,6 @@ public class PulseSettings extends SettingsPreferenceFragment implements
 
     @Override
     public int getMetricsCategory() {
-        return MetricsProto.MetricsEvent.OWLSNEST;
+        return MetricsProto.MetricsEvent.LOTUS_SETTINGS;
     }
 }

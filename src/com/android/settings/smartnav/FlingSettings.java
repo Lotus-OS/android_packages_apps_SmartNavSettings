@@ -22,8 +22,8 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.util.ArrayList;
 
-import com.aosip.support.colorpicker.ColorPickerPreference;
-import com.aosip.support.preference.CustomSeekBarPreference;
+import net.margaritov.preference.colorpicker.ColorPickerPreference;
+import com.lotus.settings.preferences.CustomSeekBarPreference;
 
 import com.android.internal.logging.nano.MetricsProto;
 import com.android.internal.utils.ActionConstants;
@@ -324,7 +324,7 @@ public class FlingSettings extends ActionFragment implements
             case DIALOG_RESET_CONFIRM:
             case DIALOG_RESTORE_PROFILE:
             case DIALOG_SAVE_PROFILE:
-                return MetricsProto.MetricsEvent.OWLSNEST;
+                return MetricsProto.MetricsEvent.LOTUS_SETTINGS;
             default:
                 return super.getDialogMetricsCategory(dialogId);
         }
@@ -720,6 +720,6 @@ public class FlingSettings extends ActionFragment implements
 
     @Override
     public int getMetricsCategory() {
-        return MetricsProto.MetricsEvent.OWLSNEST;
+        return MetricsProto.MetricsEvent.LOTUS_SETTINGS;
     }
 }
