@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
      Copyright (C) 2012-2014 The TeamEos Project
-
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
      You may obtain a copy of the License at
-
           http://www.apache.org/licenses/LICENSE-2.0
-
      Unless required by applicable law or agreed to in writing, software
      distributed under the License is distributed on an "AS IS" BASIS,
      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -22,18 +19,30 @@
         android:key="navbar_visibility"
         android:title="@string/navbar_visibility" />
 
-    <com.aosip.support.preference.SystemSettingSwitchPreference
+    <com.android.settings.custom.preference.SystemSettingSwitchPreference
+        android:key="navbar_inverse"
+        android:title="@string/nav_bar_layout_inverse_title"
+        android:summary="@string/nav_bar_layout_inverse_summary"
+        android:defaultValue="false" />
+
+    <com.lotus.settings.preferences.SystemSettingSwitchPreference
         android:key="pixel_nav_animation"
         android:title="@string/pixel_navbar_anim_title"
         android:summary="@string/pixel_navbar_anim_summary"
         android:dependency="navbar_visibility"
         android:defaultValue="true" />
 
+    <com.lotus.settings.preferences.SystemSettingSwitchPreference
+        android:key="one_hand_mode_enabled"
+        android:title="@string/one_hand_mode_title"
+        android:summary="@string/one_hand_mode_summary"
+        android:defaultValue="false" />
+
     <PreferenceCategory
         android:key="category_gesture_interface"
         android:title="@string/gesture_interface_title" >
 
-        <com.aosip.support.preference.SystemSettingSwitchPreference
+        <com.lotus.settings.preferences.SystemSettingSwitchPreference
             android:key="use_bottom_gesture_navigation"
             android:title="@string/use_bottom_gesture_title"
             android:summary="@string/use_bottom_gesture_summary"
@@ -87,7 +96,7 @@
             android:summary="@string/navbar_tuner_summary">
             <intent android:action="android.intent.action.MAIN"
                     android:targetPackage="com.android.systemui"
-                    android:targetClass="com.android.systemui.tuner.NavBarTunerActivity" />
+                    android:targetClass="com.android.systemui.tuner.NavBarActivity" />
         </Preference>
     </PreferenceCategory>
 
@@ -99,21 +108,21 @@
                 android:key="navbar_height_portrait"
                 android:title="@string/portrait_title"
                 android:max="135"
-                settings:min="65"
+                settings:min="0"
                 settings:units="%" />
 
            <com.lotus.settings.preferences.CustomSeekBarPreference
                 android:key="navbar_height_landscape"
                 android:title="@string/land_hor_title"
                 android:max="135"
-                settings:min="65"
+                settings:min="0"
                 settings:units="%" />
 
            <com.lotus.settings.preferences.CustomSeekBarPreference
                 android:key="navbar_width"
                 android:title="@string/land_vert_title"
                 android:max="135"
-                settings:min="65"
+                settings:min="0"
                 settings:units="%" />
         <PreferenceScreen
             android:key="pulse_settings"
